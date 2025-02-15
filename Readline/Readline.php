@@ -318,6 +318,21 @@ class Readline
 
         return;
     }
+    
+    /**
+     * Remove mapping.
+     */
+    public function removeMapping(string $key, $mapping): void
+    {
+        unset($this->_mapping[$key]);
+    }
+    /**
+     * Remove mapping.
+     */
+    public function clearMappings(): void
+    {
+        $this->_mapping = [];
+    }
 
     /**
      * Add an entry in the history.
